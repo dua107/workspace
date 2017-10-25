@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class ejercicio6b {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String frase;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Escribe una frase");
+		frase = sc.nextLine();
+		while (frase.length() > 80) {
+			System.out.println("Escribe una frase de menos de 80 letras");
+			frase = sc.nextLine();		
+		}//while
+		String frase2 = frase.toUpperCase();
+		String consonantes = "BCDFGHJKLMNPQRSTVWYZ";
+		String vocal = "AEIOU";	
+		int consonante=0, vocales=0, numericos=0, signos=0, i;
+		for (i=0; i < frase2.length(); i++) {
+			if (frase2.contains(consonantes)) {
+				consonante++;		
+			}//if
+			if (frase2.contains(vocal)) {
+				vocales++;		
+			}//if			
+		}//for
+		System.out.print("la frase tiene " +consonante + " consonantes, " +vocales +" vocal ");
+	}//main
+}//class
