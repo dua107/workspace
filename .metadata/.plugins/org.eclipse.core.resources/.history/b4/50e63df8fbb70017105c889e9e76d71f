@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String frase;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Escribe una frase");
+		frase = sc.nextLine();
+		while (frase.length() > 80) {
+			System.out.println("Escribe una frase de menos de 80 letras");
+		}
+		int l, num;
+		num=frase.length();
+		l = 0;
+		while (l <= num) {
+			System.out.println(frase.substring(0,l));
+			l++;
+		}//while 
+	}//main
+}//class

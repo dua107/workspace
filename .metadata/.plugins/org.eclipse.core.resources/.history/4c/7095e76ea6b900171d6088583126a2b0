@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class ejercico6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String frase;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Escribe una frase");
+		frase = sc.nextLine();
+		while (frase.length() > 80) {
+			System.out.println("Escribe una frase de menos de 80 letras");
+			frase = sc.nextLine();
+		}//while
+		int consonantes=0, vocales=0, numericos=0, i;
+		for (i=0; i < frase.length(); i++) {
+			if ((frase.charAt(i)=='a') ||  (frase.charAt(i)=='e') || (frase.charAt(i)=='i') || (frase.charAt(i)=='o') || (frase.charAt(i)=='u')) {
+				vocales++;
+			}//if
+			if ((frase.charAt(i) >=48 & frase.charAt(i) <=57)) {
+				numericos++;
+			}//if
+		}//for
+		consonantes=frase.length()-vocales-numericos;
+		System.out.println("vocales " + vocales);
+		System.out.println("consonantes " + consonantes);
+		System.out.println("numericos " + numericos);
+	}//main
+
+
+}//class

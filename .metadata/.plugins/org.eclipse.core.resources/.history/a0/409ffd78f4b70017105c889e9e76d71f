@@ -1,0 +1,16 @@
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String frase = "Hola es una prueba de java, sobre la orden String a ver si sale bien o no";
+		int l, num;
+		System.out.println(frase.length());
+		num=frase.length();
+		l = 0;
+		while (l < num) {
+			System.out.println(frase.substring(0,l));
+			l++;
+		}//while 
+	}//main
+
+}//class

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ejercicio3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String frase;
+		String palabra;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Escribe una frase");
+		frase = sc.nextLine();
+		System.out.println("Escribe una palabra de la frase");
+		palabra = sc.nextLine();
+		int k;
+		if (frase.contains(palabra + " ")) {
+			
+			System.out.println("La posicion en la frase es " + frase.indexOf(palabra));
+		}//if
+		else {
+			System.out.println("La palabra " + palabra + " no esta en la frase");
+		}
+
+	}//main
+
+}//class
