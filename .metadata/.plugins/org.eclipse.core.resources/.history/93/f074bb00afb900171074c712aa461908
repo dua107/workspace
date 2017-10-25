@@ -25,7 +25,7 @@ public class ejercicio6 {
 				signos++;
 			}//if
 		}//for
-		consonantes=frase.length()-vocales-numericos;
+		consonantes=frase.length()-vocales-numericos-signos;
 		System.out.println("vocales " + vocales);
 		System.out.println("consonantes " + consonantes);
 		System.out.println("numericos " + numericos);
