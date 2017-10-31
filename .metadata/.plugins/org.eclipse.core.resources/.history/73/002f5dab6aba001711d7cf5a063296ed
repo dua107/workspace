@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class ejercico6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String frase;
+		int k, contac, contav, numericos, i;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Escribe una frase");
+		frase = sc.nextLine();
+		while (frase.length() > 80) {
+			System.out.println("Escribe una frase de menos de 80 letras");
+			frase = sc.nextLine();
+		}//while
+		String frase2 = frase.toUpperCase();
+		String frasec = "BCDFGHJKLMNPQRSTVWYZ";
+		String frasev = "AEIOU";
+		contac =0;
+		contav =0;
+		numericos = 0;
+		i = 0;
+		for (k = 0; k < frase2.length(); k++) {
+			if (frase2.indexOf(frasec)!=1) {
+				contac++;
+			}//if
+			if (frase2.indexOf(frasev)!=1) {
+				contav++;
+			}//if
+			if (frase.charAt(k) >= 48 & frase.charAt(k) <=57) {
+				numericos++;
+			}//if
+		}//for
+		System.out.print("La frase tiene " + contac + " consonantes, " + contav + " vocales y " + numericos + " numeros");
+	}//main
+
+
+}//class

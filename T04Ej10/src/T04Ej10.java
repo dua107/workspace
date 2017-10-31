@@ -1,0 +1,31 @@
+import java.util.Scanner; 
+
+public class T04Ej10{ 
+
+public static void main(String[]args){ 
+     Scanner sc = new Scanner( System.in); 
+
+     System.out.print( "Ingrese una frase: "); 
+     String frase = sc.nextLine(); 
+     int contaLetras[] = new int[26]; 
+     int contador=0;
+     for(int i = 0; i < 26;i++){
+    	 contaLetras[i]=0;
+     }
+     for(int i = 0; i < frase.length(); i++){ 
+          char c = Character.toLowerCase( frase.charAt(i)); 
+               if(c >= 'a' && c <= 'z' ) {
+                    contaLetras[c - 'a']++; 
+     } 
+     }
+     for(int i = 0; i < 26; i++) {
+          if(contaLetras[i] > 0) {
+               System.out.println( (char)(i + 'a') + ": " + contaLetras[i]); 
+               contador++;
+} 
+     }
+     System.out.println("Aparecen " + contador + " letras distintas"); 
+     //("Aparecen " +contador + " letras distintas");
+}
+
+}
