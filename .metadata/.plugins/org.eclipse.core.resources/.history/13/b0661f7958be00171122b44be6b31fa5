@@ -29,9 +29,10 @@ public class ejercicio2 {
 		 System.out.println();
 		 System.out.println();
 		Arrays.sort(suma);
-		for (int suma2:suma) {
+		for (suma2:suma) {
 			System.out.print(suma2 + " ");
-		}				
+		}		
+			
 	}//main
 
 }//class
