@@ -1,0 +1,26 @@
+package prueba4;
+
+import java.util.Scanner;
+
+public class prueba4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String [] personas = {"pepe", "carlos", "luis", "juan", "ramon", "santiago", "soraya", "anacleto",
+				"marciano", "jordi", "samuel", "pizarro", "pepe2", "carlos2", "maria", "vero", 
+				"carlos4", "rafa", "jesus", "diego"
+		};
+		String arraynombres[]=new String [20];
+		int indice, indice_azar;
+		indice = 0;
+		
+		for(indice=0; indice<20; indice++){
+			indice_azar=(int)Math.floor(Math.random()*21);
+			arraynombres[indice]=personas[indice_azar];
+		}
+		for (indice = 0; indice<20; indice++){
+			System.out.println(arraynombres[indice]);
+		}
+	}
+
+}
